@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Productos</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+    <!-- prudctos -->
+  <body class="bg-sky-900">
+   <%- include('navbar') %>
+   <div class="container m-auto mt-6">
+    <h1 class="text-3xl text-blue-600 text-center">MEDICAMENTOS</h1>
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2 justify-center mt-6">
+     
+      <div class="flex justify-center">
+        <div class="rounded-lg shadow-lg bg-blue-400  max-w-sm">
+          <a href="#!">
+            <img class="rounded-t-lg" src="images/inyecciones.jpeg" alt=""/>
+          </a>
+          <div class="p-6">
+            <h5 class="text-gray-900 text-xl font-medium mb-2">INJECCIONES</Menu></h5>
+            <p class="text-gray-700 text-base mb-4">
+              Las inyecciones intradérmicas y subcutáneas suelen tener un agujero más pequeño y una aguja más corta.un agujero más pequeño y una aguja más corta.
+            </p>
+            </p>
+            <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div class="rounded-lg shadow-lg bg-blue-400  max-w-sm">
+          <a href="#!">
+            <img class="rounded-t-lg" src="images/M1.jpg" alt=""/>
+          </a>
+          <div class="p-6">
+            <h5 class="text-gray-900 text-xl font-medium mb-2">PASTILLAS</h5>
+            <p class="text-gray-700 text-base mb-4">
+              Las píldoras anticonceptivas (BCPs, por sus siglas en inglés) contienen 2 formas de hormonas artificiales denominadas estrógeno y progestina.
+            </p>
+            <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+          </div>
+        </div>
+      </div><div class="flex justify-center">
+        <div class="rounded-lg shadow-lg bg-blue-400 max-w-sm">
+          <a href="#!">
+            <img class="rounded-t-lg" src="images/M3.jpg" alt=""/>
+          </a>
+          <div class="p-6">
+            <h5 class="text-gray-900 text-xl font-medium mb-2">ANTICEPTICOS</h5>
+            <p class="text-gray-700 text-base mb-4">
+              Los antisépticos son agentes químicos que inhiben el crecimiento de los  ses importantes y que se usan fundamentalmente para disminuir el riesgo de infección en la piel intacta
+            </p>
+            <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   <%- include('footer') %>
+  </body>
+</html>
+<!--end productos-->
