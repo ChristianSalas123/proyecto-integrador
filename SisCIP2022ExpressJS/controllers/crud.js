@@ -129,6 +129,24 @@ exports.saveatencion=(req, rest)=>{
     }) 
 }
 
+exports.saveclievent=(req, rest)=>{
+    const at_fecha=req.body.at_fecha;
+    const at_numero=req.body.at_numero;
+    const at_motivo=req.body.at_motivo;
+    const at_cli_id=req.body.at_cli_id;
+    const at_tra_id=req.body.at_tra_id;
+    const at_prod_id=req.body.at_prod_id;
+    const at_detalle_cantidad=req.body.at_detalle_cantidad;
+    /* console.log(tra_nombre +" - "+tra_nro_documento+" - "+tra_ap_paterno +" - "+tra_ap_materno +" - "+tra_direccion+" - "+tra_telefono+" - "+email+" - "+password); */
+    dbConn.query('INSERT INTO atencion SET ?' ,{at_fecha:at_fecha, at_numero:at_numero, at_motivo:at_motivo, at_cli_id:at_cli_id, at_tra_id:at_tra_id, at_prod_id:at_prod_id, at_detalle_cantidad:at_detalle_cantidad}, (error, results)=>{
+        if(error){
+            console.log(error);
+        }else{
+            rest.redirect('/eventoclient');
+        }
+    }) 
+}
+
 exports.saveevent=(req, rest)=>{
     const evento_nombre=req.body.evento_nombre;
     const evento_descripcion=req.body.evento_descripcion;

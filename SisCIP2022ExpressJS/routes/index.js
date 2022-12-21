@@ -126,6 +126,27 @@ router.get('/atencioncli/:cli_id', (req, res)=>{
   })
 });
 
+router.get('/eventocli/:cli_id', (req, res)=>{
+  const cli_id = req.params.cli_id;
+  dbConn.query('SELECT * FROM clientes WHERE cli_id = ?',[cli_id], (error, results)=>{
+    if(error){
+      throw error;
+  }else{
+      res.render('evento/eventcli', {usercli:results[0]});
+  }
+  })
+});
+
+router.get('/eventoclient', (req, res)=>{
+  dbConn.query('SELECT * FROM clientes', (error, results)=>{
+     if(error){
+         throw error;
+     }else{
+         res.render('evento/listacli', {results:results});
+     }
+  })
+})
+
 
 
 
@@ -216,6 +237,7 @@ const crud = require('../controllers/crud');
 router.post('/save', crud.save)
 router.post('/savecli', crud.savecli)
 router.post('/saveatencion', crud.saveatencion)
+router.post('/saveclievent', crud.saveclievent)
 router.post('/savepro', crud.savepro)
 router.post('/saveevent', crud.saveevent)
 router.post('/update', crud.update)

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
 
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <title>Lista Productos</title>
+    <title>Lista Clientes</title>
   </head>
   <body>
     <%- include('../partials/header'); %>
@@ -19,27 +19,28 @@
         <div class="relative bg-gray-200 md:pt-12 pb-32 pt-12">
             <div class="px-4 md:px-10 mx-auto w-full">
                 <div class="container">
-                    <a href="/creaevento" class="btn btn-outline-primary mt-4"><i class='bx bx-folder-plus bs-md'></i></a>
-                    <table id="evento" class="table table-bordered table striped text-center mt-4">
+                    <a href="/creacli" class="btn btn-outline-primary mt-4"><i class='bx bx-folder-plus bs-md'></i></a>
+                    <table id="cientesevent" class="table table-bordered table striped text-center mt-4">
                         <thead>
                             <tr class="bg-primary text-white">
                                 <th scope="col">ID</th>
                                 <th scope="col">NOMBRE</th>
-                                <th scope="col">DESCRIPCION</th>
+                                <th scope="col">NUM DOCUMENTO</th>
+                                <th scope="col">SEXO</th>
+                                <th scope="col">TIPO</th>
                                 <th scope="col">ACCIONES</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <% results.forEach((userevento)=> { %>
-
-                            
+                            <% results.forEach((usercli)=> { %>
                             <tr>
-                                <td><%= userevento.evento_id %></td>
-                                <td><%= userevento.evento_nombre %></td>
-                                <td><%= userevento.evento_descripcion %></td>
+                                <td><%= usercli.cli_id %></td>
+                                <td><%= usercli.cli_nombre %></td>
+                                <td><%= usercli.cli_nro_documento %></td>
+                                <td><%= usercli.cli_sexo %></td>
+                                <td><%= usercli.cli_tipo_persona %></td>
                                 <td>
-                                    <a href="/editevento/<%= userevento.evento_id %>" class="btn btn-outline-info">VER</a>
-                                    <a href="/eventoclient" class="btn btn-outline-info">Lista</a>
+                                    <a href="/eventocli/<%= usercli.cli_id %>" class="btn btn-outline-info">Evento</a>
                                 </td>
                             </tr>
                         <% }) %>
@@ -54,11 +55,11 @@
     </div>
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
     <script>
         $(document).ready(function () {
-            $('#evento').DataTable();
+            $('#cientesevent').DataTable();
         });
     </script>
+    
   </body>
 </html>
