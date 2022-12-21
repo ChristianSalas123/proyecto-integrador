@@ -5,9 +5,10 @@ var connection = mysql.createConnection({
 	host:'localhost',
 	user:'root',
 	password:'',
+	//nombre de la tabla
 	database:'medicocr'
 });
-
+// definir conexion
 connection.connect(function(error){
 	if(!!error) {
 		console.log(error);
